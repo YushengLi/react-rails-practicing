@@ -48,26 +48,29 @@ var TodoItem = React.createClass({
     // This differentiation between classification and state becomes important
     // in the naming of view actions toggleComplete() vs. destroyCompleted().
     return (
-      <li
-        className={classNames({
-          'completed': todo.complete,
-          'editing': this.state.isEditing
-        })}
-        key={todo.id}>
-        <div className="view">
-          <input
-            className="toggle"
-            type="checkbox"
-            checked={todo.complete}
-            onChange={this._onToggleComplete}
-          />
-          <label onDoubleClick={this._onDoubleClick}>
-            {todo.text}
-          </label>
-          <button className="destroy" onClick={this._onDestroyClick} />
-        </div>
-        {input}
+      <li>
+        <label>{this.props.todo.text}</label>
       </li>
+      // <li
+      //   className={classNames({
+      //     'completed': todo.complete,
+      //     'editing': this.state.isEditing
+      //   })}
+      //   key={todo.id}>
+      //   <div className="view">
+      //     <input
+      //       className="toggle"
+      //       type="checkbox"
+      //       checked={todo.complete}
+      //       onChange={this._onToggleComplete}
+      //     />
+      //     <label onDoubleClick={this._onDoubleClick}>
+      //       {todo.text}
+      //     </label>
+      //     <button className="destroy" onClick={this._onDestroyClick} />
+      //   </div>
+      //   {input}
+      // </li>
     );
   },
 

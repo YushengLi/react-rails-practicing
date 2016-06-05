@@ -5,7 +5,9 @@ var TodoConstants = require('../constants/TodoConstants');
 var CHANGE_EVENT = 'change';
 
 // 資料本體
-var _todos = {};
+var _todos = {
+  'todo1': {id: "todo1", text: 'First todo item'}
+};
 
 // 操作資料本體的函式
 function create(text) {
