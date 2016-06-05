@@ -18,8 +18,8 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
-      'window.jQuery': 'jquery,
-      _: 'lodash
+      'window.jQuery': 'jquery',
+      _: 'lodash'
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
