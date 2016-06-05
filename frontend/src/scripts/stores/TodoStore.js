@@ -22,7 +22,7 @@ function update(id, updates) {
   _todos[id] = Object.assign({}, _todos[id], updates);
 }
 
-// 對 View (Component) 公開的函示var TodoStore = assign({}, EventEmitter.prototype, {
+// 對 View (Component) 公開的函示
 var TodoStore = Object.assign({}, EventEmitter.prototype, {
   // addChangeListener
   addChangeListener: function(callback) {

@@ -28,14 +28,12 @@ const App = React.createClass({
     return (
       <div>
         <h1>東西有出來，痛哭流涕 Q_Q</h1>
-        {/*
           <Header />
           <MainSection
             allTodos={this.state.allTodos}
             areAllComplete={this.state.areAllComplete}
           />
           <Footer allTodos={this.state.allTodos} />
-        */}
       </div>
     )
   },

@@ -202,7 +202,13 @@
 	        'h1',
 	        null,
 	        '東西有出來，痛哭流涕 Q_Q'
-	      )
+	      ),
+	      _react2.default.createElement(_Header2.default, null),
+	      _react2.default.createElement(_MainSection2.default, {
+	        allTodos: this.state.allTodos,
+	        areAllComplete: this.state.areAllComplete
+	      }),
+	      _react2.default.createElement(_Footer2.default, { allTodos: this.state.allTodos })
 	    );
 	  },
 
@@ -4389,12 +4395,12 @@
 	  };
 	}
 
-	function update(id, updates) {}
-	// _todos[id] = Object.assign({}, _todos[id], updates);
-
+	function update(id, updates) {
+	  _todos[id] = Object.assign({}, _todos[id], updates);
+	}
 
 	// 對 View (Component) 公開的函示var TodoStore = assign({}, EventEmitter.prototype, {
-	var TodoStore = assign({}, EventEmitter.prototype, {
+	var TodoStore = Object.assign({}, EventEmitter.prototype, {
 	  // addChangeListener
 	  addChangeListener: function addChangeListener(callback) {
 	    this.on(CHANGE_EVENT, callback);
