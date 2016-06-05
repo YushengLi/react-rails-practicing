@@ -21,7 +21,7 @@ function create(text) {
 }
 
 function update(id, updates) {
-  _todos[id] = Object.assign({}, _todos[id], updates);
+  _todos[id] = Object.assign(_todos[id], updates);
 }
 
 // 對 View (Component) 公開的函示
@@ -68,13 +68,15 @@ AppDispatcher.register(function(action) {
       }
       break;
 
-    case TodoConstants.UPDATE_TODO_TEXT:
-      text = action.text.trim();
+    case TodoConstants.TODO_UPDATE_TEXT:
+      var text = action.text.trim();
       if (text !== '') {
         update(action.id, {text: text});
         TodoStore.emitChange();
       }
       break;
+    default:
+      console.log('ActionType not defined!');
   }
 });
 

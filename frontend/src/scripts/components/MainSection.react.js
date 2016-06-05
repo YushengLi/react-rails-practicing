@@ -20,18 +20,18 @@ var MainSection = React.createClass({
   },
 
   getTodos() {
-    // var allTodos = this.props.allTodos;
-    // var todos = [];
-    //
-    // for (var key in allTodos) {
-    //   todos.push(<TodoItem key={key} todo={allTodos[key]} />);
-    // }
-    //
-    // return todos;
+    var allTodos = this.props.allTodos;
+    var todos = [];
 
-    return this.props.allTodos.map(function(todo) {
-      console.log(todo);
-    })
+    for (var key in allTodos) {
+      todos.push(<TodoItem key={key} todo={allTodos[key]} />);
+    }
+
+    return todos;
+
+    // return this.props.allTodos.map(function(todo) {
+    //   console.log(todo);
+    // })
   },
 
   render() {

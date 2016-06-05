@@ -60,6 +60,7 @@ var TodoItem = React.createClass({
               type="checkbox"
               checked={todo.complete}
               onChange={this._onToggleComplete}
+              onSave={this._onSave}
               value={todo.text}
           />
           <label onDoubleClick={this._onDoubleClick}>{text}</label>
