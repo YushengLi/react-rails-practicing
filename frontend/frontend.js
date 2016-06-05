@@ -4389,9 +4389,9 @@
 	  };
 	}
 
-	function update(id, updates) {
-	  _todos[id] = Object.assign({}, _todos[id], updates);
-	}
+	function update(id, updates) {}
+	// _todos[id] = Object.assign({}, _todos[id], updates);
+
 
 	// 對 View (Component) 公開的函示var TodoStore = assign({}, EventEmitter.prototype, {
 	var TodoStore = assign({}, EventEmitter.prototype, {

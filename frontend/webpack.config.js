@@ -11,7 +11,7 @@ module.exports = {
     ]
   },
   output: {
-    path: "../app/assets/javascripts",
+    path: "./",
     filename: "frontend.js"
   },
   plugins: [

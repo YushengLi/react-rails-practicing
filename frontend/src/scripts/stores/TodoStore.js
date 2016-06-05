@@ -23,7 +23,7 @@ function update(id, updates) {
 }
 
 // 對 View (Component) 公開的函示var TodoStore = assign({}, EventEmitter.prototype, {
-var TodoStore = assign({}, EventEmitter.prototype, {
+var TodoStore = Object.assign({}, EventEmitter.prototype, {
   // addChangeListener
   addChangeListener: function(callback) {
     this.on(CHANGE_EVENT, callback);
